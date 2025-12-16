@@ -21,10 +21,10 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
                 alt="МЕД-ОБРАЗ" 
-                className="h-16"
+                className="h-48"
               />
             </div>
-            <div className="hidden md:flex gap-8 text-base">
+            <div className="hidden md:flex gap-8 text-2xl">
               {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
                 <button
                   key={item}
@@ -36,7 +36,8 @@ const Index = () => {
               ))}
             </div>
             <Button 
-              className="bg-accent text-white hover:bg-accent/90"
+              size="lg"
+              className="bg-accent text-white hover:bg-accent/90 text-xl px-8 py-6"
               onClick={() => setShowForm(true)}
             >
               Записаться
@@ -49,16 +50,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 animate-fade-in">
-              <h1 className="font-['Montserrat'] font-bold text-3xl md:text-5xl mb-6 text-foreground">
+              <h1 className="font-['Montserrat'] font-bold text-5xl md:text-7xl mb-6 text-foreground">
                 Уровни психической организации личности в концепции психоаналитической диагностики
               </h1>
-              <p className="text-lg mb-8 text-gray-700 max-w-3xl mx-auto">
+              <p className="text-3xl mb-8 text-gray-700 max-w-3xl mx-auto">
                 Авторский курс для психологов-консультантов и психотерапевтов, начинающих практику в психоаналитическом подходе
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg"
-                  className="bg-primary text-white hover:bg-primary/90 font-semibold"
+                  className="bg-primary text-white hover:bg-primary/90 font-semibold text-2xl px-10 py-7"
                   onClick={() => scrollToSection('цена')}
                 >
                   Записаться на курс
@@ -66,7 +67,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-primary text-primary hover:bg-primary/10 font-semibold"
+                  className="border-primary text-primary hover:bg-primary/10 font-semibold text-2xl px-10 py-7"
                   onClick={() => scrollToSection('программа')}
                 >
                   Программа курса
@@ -95,7 +96,7 @@ const Index = () => {
 
       <section id="о-курсе" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
+          <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             О курсе
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -103,7 +104,7 @@ const Index = () => {
               <Card className="border-2 border-primary/20 hover:shadow-lg hover:border-primary/40 transition-all">
                 <CardContent className="p-6">
                   <Icon name="Calendar" size={32} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
+                  <h3 className="font-['Montserrat'] font-semibold text-3xl mb-2 text-foreground">
                     Формат
                   </h3>
                   <p className="text-gray-700 text-sm">7 вебинаров в прямом эфире + 2 практических занятия с супервизией</p>
@@ -112,7 +113,7 @@ const Index = () => {
               <Card className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
                 <CardContent className="p-6">
                   <Icon name="Video" size={32} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
+                  <h3 className="font-['Montserrat'] font-semibold text-3xl mb-2 text-foreground">
                     Записи
                   </h3>
                   <p className="text-gray-700 text-sm">Все вебинары доступны в записи в течение 6 месяцев</p>
@@ -121,7 +122,7 @@ const Index = () => {
               <Card className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
                 <CardContent className="p-6">
                   <Icon name="FileText" size={32} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
+                  <h3 className="font-['Montserrat'] font-semibold text-3xl mb-2 text-foreground">
                     Документ
                   </h3>
                   <p className="text-gray-700 text-sm">Удостоверение о повышении квалифиации по итогам обучения</p>
@@ -145,7 +146,7 @@ const Index = () => {
 
       <section id="для-кого" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
+          <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Для кого этот курс
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -199,7 +200,7 @@ const Index = () => {
 
       <section id="программа" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
+          <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Программа курса
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -240,7 +241,7 @@ const Index = () => {
                         {index + 1}
                       </div>
                       <div>
-                        <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
+                        <h3 className="font-['Montserrat'] font-semibold text-3xl mb-2 text-foreground">
                           {item.title}
                         </h3>
                         <p className="text-gray-700 text-sm">{item.content}</p>
@@ -256,7 +257,7 @@ const Index = () => {
 
       <section id="чему-научишься" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
+          <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Чему вы научитесь
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -300,7 +301,7 @@ const Index = () => {
 
       <section id="преподаватель" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
+          <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Преподаватель
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -346,7 +347,7 @@ const Index = () => {
 
       <section id="цена" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
+          <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Стоимость и запись
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -360,7 +361,7 @@ const Index = () => {
                     <div className="font-['Montserrat'] font-bold text-4xl mb-2" style={{ color: '#1d4356' }}>
                       15 000 ₽
                     </div>
-                    <p className="text-gray-600">при оплате 100% до 25.01</p>
+                    <p className="text-gray-600 text-2xl">при оплате 100% до 25.01</p>
                   </div>
                   <Button 
                     className="w-full text-white font-semibold"
@@ -381,7 +382,7 @@ const Index = () => {
                     <div className="font-['Montserrat'] font-bold text-4xl mb-2" style={{ color: '#1d4356' }}>
                       20 000 ₽
                     </div>
-                    <p className="text-gray-600">при оплате 100% до 01.02</p>
+                    <p className="text-gray-600 text-2xl">при оплате 100% до 01.02</p>
                   </div>
                   <Button 
                     className="w-full font-semibold"
@@ -401,7 +402,7 @@ const Index = () => {
 
       <section id="faq" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
+          <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Часто задаваемые вопросы
           </h2>
           <div className="max-w-3xl mx-auto">
