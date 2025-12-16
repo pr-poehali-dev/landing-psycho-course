@@ -41,15 +41,15 @@ const Index = () => {
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12 animate-fade-in">
               <h1 className="font-['Montserrat'] font-bold text-3xl md:text-5xl mb-6" style={{ color: '#1d4356' }}>
                 Уровни психической организации личности в концепции психоаналитической диагностики
               </h1>
-              <p className="text-lg mb-8 text-gray-700">
+              <p className="text-lg mb-8 text-gray-700 max-w-3xl mx-auto">
                 Авторский курс для психологов-консультантов и психотерапевтов, начинающих практику в психоаналитическом подходе
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg"
                   style={{ backgroundColor: '#1d4356' }}
@@ -70,7 +70,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="relative w-full max-w-md">
+              <div className="relative w-full max-w-3xl">
                 <div className="absolute -inset-4 rounded-lg opacity-20" style={{ backgroundColor: '#1d4356' }}></div>
                 <div className="relative rounded-lg shadow-2xl overflow-hidden bg-white">
                   <div className="aspect-video">
