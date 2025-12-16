@@ -105,47 +105,72 @@ const Index = () => {
           <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             О курсе
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <Card className="border-2 border-primary/20 hover:shadow-lg hover:border-primary/40 transition-all">
-                <CardContent className="p-6">
-                  <Icon name="Calendar" size={32} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-3xl mb-2 text-foreground">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
+                <CardContent className="p-8">
+                  <Icon name="Calendar" size={48} className="mb-4 text-accent" />
+                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
                     Формат
                   </h3>
-                  <p className="text-gray-700 text-sm">7 вебинаров в прямом эфире + 2 практических занятия с супервизией</p>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    7 вебинаров в прямом эфире с лекционным материалом и возможностью задать вопросы + 2 практических-супервизионных занятия с разбором случаев
+                  </p>
                 </CardContent>
               </Card>
-              <Card className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
-                <CardContent className="p-6">
-                  <Icon name="Video" size={32} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-3xl mb-2 text-foreground">
+              <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
+                <CardContent className="p-8">
+                  <Icon name="Video" size={48} className="mb-4 text-accent" />
+                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
                     Записи
                   </h3>
-                  <p className="text-gray-700 text-sm">Все вебинары доступны в записи в течение 6 месяцев</p>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    Все материалы остаются в записи и доступны в течение 6 месяцев после окончания курса
+                  </p>
                 </CardContent>
               </Card>
-              <Card className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
-                <CardContent className="p-6">
-                  <Icon name="FileText" size={32} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-3xl mb-2 text-foreground">
+              <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
+                <CardContent className="p-8">
+                  <Icon name="Award" size={48} className="mb-4 text-accent" />
+                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
                     Документ
                   </h3>
-                  <p className="text-gray-700 text-sm">Удостоверение о повышении квалифиации по итогам обучения</p>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    Удостоверение о повышении квалификации установленного образца с занесением в ФРДО
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
+                <CardContent className="p-8">
+                  <Icon name="BookOpen" size={48} className="mb-4 text-accent" />
+                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
+                    Материалы
+                  </h3>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    После каждого вебинара: презентации и конспекты. Общий чат для обсуждения с преподавателем
+                  </p>
                 </CardContent>
               </Card>
             </div>
-            <div className="prose max-w-none">
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                Данный курс включает 7 вебинаров в прямом эфире с лекционным материалом и возможностью задать вопросы преподавателю, а также 2 практических-супервизионных занятия с разбором представляемых обучающимися случаев.
-              </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                В процессе обучения вы получите два промежуточных домашних задания на отработку практических навыков психоаналитической диагностики с обратной связью от преподавателя.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                После каждого вебинара предоставляются презентации и конспекты. Общий чат для обсуждения текущих вопросов между собой и с преподавателем.
-              </p>
-            </div>
+            
+            <Card className="bg-blue-50 border-2 border-primary/30">
+              <CardContent className="p-8">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="PenTool" size={28} className="flex-shrink-0 mt-1 text-primary" />
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      <strong>В процессе обучения</strong> вы получите два промежуточных домашних задания на отработку практических навыков психоаналитической диагностики с обратной связью от преподавателя.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="ClipboardCheck" size={28} className="flex-shrink-0 mt-1 text-primary" />
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      <strong>По итогам курса</strong> обучающиеся проходят тестирование.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -257,24 +282,7 @@ const Index = () => {
               ))}
             </div>
             
-            <Card className="mt-12 bg-blue-50 border-2 border-primary/30">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Icon name="BookOpen" size={28} className="flex-shrink-0 mt-1 text-primary" />
-                    <p className="text-gray-700 text-xl leading-relaxed">
-                      <strong>В процессе обучения</strong> вы получите два промежуточных домашних задания на отработку практических навыков психоаналитической диагностики с обратной связью от преподавателя.
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="ClipboardCheck" size={28} className="flex-shrink-0 mt-1 text-primary" />
-                    <p className="text-gray-700 text-xl leading-relaxed">
-                      <strong>По итогам курса</strong> обучающиеся проходят тестирование.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </section>
