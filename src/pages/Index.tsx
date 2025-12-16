@@ -6,10 +6,12 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [, setShowForm] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -21,7 +23,7 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
                 alt="МЕД-ОБРАЗ" 
-                className="h-48"
+                className="h-32 md:h-48"
               />
             </div>
             <div className="hidden md:flex gap-8 text-2xl">
@@ -35,14 +37,49 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <Button 
-              size="lg"
-              className="bg-accent text-white hover:bg-accent/90 text-xl px-8 py-6"
-              onClick={() => setShowForm(true)}
-            >
-              Записаться
-            </Button>
+            <div className="flex items-center gap-4">
+              <Button 
+                size="lg"
+                className="hidden md:flex bg-accent text-white hover:bg-accent/90 text-xl px-8 py-6"
+                onClick={() => setShowForm(true)}
+              >
+                Записаться
+              </Button>
+              <button
+                className="md:hidden p-2 text-gray-700 hover:text-primary"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Меню"
+              >
+                <Icon name={mobileMenuOpen ? "X" : "Menu"} size={32} />
+              </button>
+            </div>
           </nav>
+          
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t pt-4">
+              <div className="flex flex-col space-y-4">
+                {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                    className="text-left text-gray-700 hover:text-primary transition-colors font-medium text-xl py-2"
+                  >
+                    {item}
+                  </button>
+                ))}
+                <Button 
+                  size="lg"
+                  className="bg-accent text-white hover:bg-accent/90 text-xl w-full"
+                  onClick={() => {
+                    setShowForm(true);
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Записаться
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
