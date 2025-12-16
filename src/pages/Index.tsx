@@ -16,6 +16,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen font-['Open_Sans'] bg-background">
+      {/* Backdrop blur overlay */}
+      {mobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+      
       <header className="sticky top-0 z-50 border-b bg-white shadow-sm">
         <div className="container mx-auto px-4 py-5">
           <nav className="flex items-center justify-between">
