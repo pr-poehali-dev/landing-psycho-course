@@ -17,12 +17,16 @@ const Index = () => {
       <header className="sticky top-0 z-50 border-b" style={{ backgroundColor: '#1d4356', borderColor: '#1d4356' }}>
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col">
               <img 
                 src="https://cdn.poehali.dev/files/photo_5337165063867009901_y.jpg" 
                 alt="МЕД-ОБРАЗ" 
-                className="h-10"
+                className="h-10 mb-2"
               />
+              <p className="text-white text-xs max-w-xs leading-tight">
+                Научно-образовательный центр Современных Медицинских Технологий<br/>
+                проект Союза охраны психического здоровья
+              </p>
             </div>
             <div className="hidden md:flex gap-6 text-sm">
               {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
