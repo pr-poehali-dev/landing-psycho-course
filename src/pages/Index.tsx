@@ -14,12 +14,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen font-['Open_Sans']" style={{ backgroundColor: '#c7c6c6' }}>
-      <header className="sticky top-0 z-50 border-b" style={{ backgroundColor: '#1d4356', borderColor: '#1d4356' }}>
+      <header className="sticky top-0 z-50 border-b bg-white" style={{ borderColor: '#e0e0e0' }}>
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
-                src="https://cdn.poehali.dev/files/photo_5337165063867009967_x.jpg" 
+                src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
                 alt="МЕД-ОБРАЗ" 
                 className="h-12"
               />
@@ -29,7 +29,8 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="text-white hover:text-gray-200 transition-colors"
+                  className="hover:opacity-70 transition-colors"
+                  style={{ color: '#1d4356' }}
                 >
                   {item}
                 </button>
