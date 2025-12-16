@@ -17,7 +17,13 @@ const Index = () => {
       <header className="sticky top-0 z-50 border-b" style={{ backgroundColor: '#1d4356', borderColor: '#1d4356' }}>
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="text-white font-['Montserrat'] font-bold text-xl">РосМедОбразование</div>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_5337165063867009901_y.jpg" 
+                alt="МЕД-ОБРАЗ" 
+                className="h-10"
+              />
+            </div>
             <div className="hidden md:flex gap-6 text-sm">
               {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
                 <button
@@ -472,21 +478,30 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 bg-white border-t">
+      <footer className="py-12 bg-white border-t">
         <div className="container mx-auto px-4">
-          <div className="text-center text-gray-600 text-sm">
-            <p className="mb-2">© 2024 РосМедОбразование. Научно-Образовательный Центр Современных Медицинских Технологий</p>
-            <p>
+          <div className="flex flex-col items-center">
+            <img 
+              src="https://cdn.poehali.dev/files/photo_5337165063867009901_y.jpg" 
+              alt="МЕД-ОБРАЗ" 
+              className="h-16 mb-4"
+            />
+            <p className="text-center text-gray-600 text-xs max-w-md leading-relaxed">
+              Научно-образовательный центр Современных Медицинских Технологий<br/>
+              проект Союза охраны психического здоровья
+            </p>
+            <p className="mt-4">
               <a 
                 href="https://rosmededucation.ru/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:underline"
+                className="hover:underline text-sm"
                 style={{ color: '#1d4356' }}
               >
                 rosmededucation.ru
               </a>
             </p>
+            <p className="text-gray-500 text-xs mt-2">© 2024</p>
           </div>
         </div>
       </footer>
