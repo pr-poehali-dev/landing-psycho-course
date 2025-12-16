@@ -13,8 +13,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen font-['Open_Sans']" style={{ backgroundColor: '#c7c6c6' }}>
-      <header className="sticky top-0 z-50 border-b" style={{ backgroundColor: '#2a5468', borderColor: '#2a5468' }}>
+    <div className="min-h-screen font-['Open_Sans'] bg-background">
+      <header className="sticky top-0 z-50 border-b bg-white shadow-sm">
         <div className="container mx-auto px-4 py-5">
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
@@ -29,15 +29,14 @@ const Index = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="text-white hover:text-gray-200 transition-colors font-medium"
+                  className="text-gray-700 hover:text-primary transition-colors font-medium"
                 >
                   {item}
                 </button>
               ))}
             </div>
             <Button 
-              style={{ backgroundColor: '#d3544f' }}
-              className="text-white hover:opacity-90"
+              className="bg-accent text-white hover:bg-accent/90"
               onClick={() => setShowForm(true)}
             >
               Записаться
@@ -50,7 +49,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 animate-fade-in">
-              <h1 className="font-['Montserrat'] font-bold text-3xl md:text-5xl mb-6" style={{ color: '#1d4356' }}>
+              <h1 className="font-['Montserrat'] font-bold text-3xl md:text-5xl mb-6 text-foreground">
                 Уровни психической организации личности в концепции психоаналитической диагностики
               </h1>
               <p className="text-lg mb-8 text-gray-700 max-w-3xl mx-auto">
@@ -59,8 +58,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg"
-                  style={{ backgroundColor: '#1d4356' }}
-                  className="text-white hover:opacity-90 font-semibold"
+                  className="bg-primary text-white hover:bg-primary/90 font-semibold"
                   onClick={() => scrollToSection('цена')}
                 >
                   Записаться на курс
@@ -68,8 +66,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  style={{ borderColor: '#1d4356', color: '#1d4356' }}
-                  className="hover:bg-gray-100 font-semibold"
+                  className="border-primary text-primary hover:bg-primary/10 font-semibold"
                   onClick={() => scrollToSection('программа')}
                 >
                   Программа курса
@@ -78,7 +75,7 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative w-full max-w-3xl">
-                <div className="absolute -inset-4 rounded-lg opacity-20" style={{ backgroundColor: '#1d4356' }}></div>
+                <div className="absolute -inset-4 rounded-lg opacity-10 bg-primary"></div>
                 <div className="relative rounded-lg shadow-2xl overflow-hidden bg-white">
                   <div className="aspect-video">
                     <iframe
@@ -98,15 +95,15 @@ const Index = () => {
 
       <section id="о-курсе" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center" style={{ color: '#1d4356' }}>
+          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
             О курсе
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
+              <Card className="border-2 border-primary/20 hover:shadow-lg hover:border-primary/40 transition-all">
                 <CardContent className="p-6">
-                  <Icon name="Calendar" size={32} style={{ color: '#d3544f' }} className="mb-4" />
-                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2" style={{ color: '#1d4356' }}>
+                  <Icon name="Calendar" size={32} className="mb-4 text-accent" />
+                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
                     Формат
                   </h3>
                   <p className="text-gray-700 text-sm">7 вебинаров в прямом эфире + 2 практических занятия с супервизией</p>
@@ -114,8 +111,8 @@ const Index = () => {
               </Card>
               <Card className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
                 <CardContent className="p-6">
-                  <Icon name="Video" size={32} style={{ color: '#d3544f' }} className="mb-4" />
-                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2" style={{ color: '#1d4356' }}>
+                  <Icon name="Video" size={32} className="mb-4 text-accent" />
+                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
                     Записи
                   </h3>
                   <p className="text-gray-700 text-sm">Все вебинары доступны в записи в течение 6 месяцев</p>
@@ -123,8 +120,8 @@ const Index = () => {
               </Card>
               <Card className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
                 <CardContent className="p-6">
-                  <Icon name="FileText" size={32} style={{ color: '#d3544f' }} className="mb-4" />
-                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2" style={{ color: '#1d4356' }}>
+                  <Icon name="FileText" size={32} className="mb-4 text-accent" />
+                  <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
                     Документ
                   </h3>
                   <p className="text-gray-700 text-sm">Удостоверение о повышении квалифиации по итогам обучения</p>
@@ -148,14 +145,14 @@ const Index = () => {
 
       <section id="для-кого" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center" style={{ color: '#1d4356' }}>
+          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
             Для кого этот курс
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-white hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
-                  <Icon name="Users" size={40} style={{ color: '#d3544f' }} className="mb-4" />
+                  <Icon name="Users" size={40} className="mb-4 text-accent" />
                   <h3 className="font-['Montserrat'] font-semibold text-xl mb-4" style={{ color: '#1d4356' }}>
                     Для практикующих специалистов
                   </h3>
@@ -166,7 +163,7 @@ const Index = () => {
               </Card>
               <Card className="bg-white hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
-                  <Icon name="GraduationCap" size={40} style={{ color: '#d3544f' }} className="mb-4" />
+                  <Icon name="GraduationCap" size={40} className="mb-4 text-accent" />
                   <h3 className="font-['Montserrat'] font-semibold text-xl mb-4" style={{ color: '#1d4356' }}>
                     Для студентов
                   </h3>
@@ -189,7 +186,7 @@ const Index = () => {
                     'Укрепить навыки психоаналитической диагностики на практических примерах и супервизиях в ходе обучения'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <Icon name="CheckCircle2" size={24} style={{ color: '#d3544f' }} className="flex-shrink-0 mt-1" />
+                      <Icon name="CheckCircle2" size={24} className="flex-shrink-0 mt-1 text-accent" />
                       <span className="text-gray-700">{item}</span>
                     </li>
                   ))}
@@ -202,7 +199,7 @@ const Index = () => {
 
       <section id="программа" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center" style={{ color: '#1d4356' }}>
+          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
             Программа курса
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -233,17 +230,17 @@ const Index = () => {
                   content: 'Разборы кейсов студентов под руководством преподавателя. Отработка навыков диагностики на конкретных примерах из практики участников.'
                 }
               ].map((item, index) => (
-                <Card key={index} className="border-2 hover:shadow-lg transition-shadow" style={{ borderColor: '#1d4356' }}>
+                <Card key={index} className="border-2 border-primary/20 hover:shadow-lg hover:border-primary/40 transition-all">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div 
                         className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-['Montserrat'] font-bold text-white"
-                        style={{ backgroundColor: '#d3544f' }}
+                        className="bg-accent"
                       >
                         {index + 1}
                       </div>
                       <div>
-                        <h3 className="font-['Montserrat'] font-semibold text-lg mb-2" style={{ color: '#1d4356' }}>
+                        <h3 className="font-['Montserrat'] font-semibold text-lg mb-2 text-foreground">
                           {item.title}
                         </h3>
                         <p className="text-gray-700 text-sm">{item.content}</p>
@@ -259,7 +256,7 @@ const Index = () => {
 
       <section id="чему-научишься" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center" style={{ color: '#1d4356' }}>
+          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
             Чему вы научитесь
           </h2>
           <div className="max-w-4xl mx-auto">
@@ -288,7 +285,7 @@ const Index = () => {
               ].map((item, index) => (
                 <Card key={index} className="bg-white hover:shadow-xl transition-all hover:scale-105">
                   <CardContent className="p-6">
-                    <Icon name={item.icon as any} size={40} style={{ color: '#d3544f' }} className="mb-4" />
+                    <Icon name={item.icon as any} size={40} className="mb-4 text-accent" />
                     <h3 className="font-['Montserrat'] font-semibold text-lg mb-3" style={{ color: '#1d4356' }}>
                       {item.title}
                     </h3>
@@ -303,15 +300,15 @@ const Index = () => {
 
       <section id="преподаватель" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center" style={{ color: '#1d4356' }}>
+          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
             Преподаватель
           </h2>
           <div className="max-w-4xl mx-auto">
-            <Card className="border-2" style={{ borderColor: '#1d4356' }}>
+            <Card className="border-2 border-primary/30">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="flex-shrink-0">
-                    <div className="w-48 h-48 rounded-full overflow-hidden border-4" style={{ borderColor: '#d3544f' }}>
+                    <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-accent">
                       <img 
                         src="https://cdn.poehali.dev/files/photo_5377459643875461653_y.jpg"
                         alt="Екатерина Степанова"
@@ -320,7 +317,7 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-['Montserrat'] font-bold text-2xl mb-2" style={{ color: '#d3544f' }}>
+                    <h3 className="font-['Montserrat'] font-bold text-2xl mb-2 text-accent">
                       Екатерина Степанова
                     </h3>
                     <p className="text-gray-700 mb-6 text-lg">
@@ -334,7 +331,7 @@ const Index = () => {
                         'Интегративный подход с опорой на психоаналитический'
                       ].map((item, index) => (
                         <li key={index} className="flex items-start gap-3">
-                          <Icon name="Award" size={20} style={{ color: '#d3544f' }} className="flex-shrink-0 mt-1" />
+                          <Icon name="Award" size={20} className="flex-shrink-0 mt-1 text-accent" />
                           <span className="text-gray-700 text-sm">{item}</span>
                         </li>
                       ))}
@@ -349,15 +346,15 @@ const Index = () => {
 
       <section id="цена" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center" style={{ color: '#1d4356' }}>
+          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
             Стоимость и запись
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="border-2 hover:shadow-2xl transition-all hover:scale-105" style={{ borderColor: '#d3544f' }}>
+              <Card className="border-2 border-accent hover:shadow-2xl transition-all hover:scale-105">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
-                    <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#d3544f', color: 'white' }}>
+                    <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 bg-accent text-white">
                       Ранняя запись
                     </div>
                     <div className="font-['Montserrat'] font-bold text-4xl mb-2" style={{ color: '#1d4356' }}>
@@ -368,17 +365,17 @@ const Index = () => {
                   <Button 
                     className="w-full text-white font-semibold"
                     size="lg"
-                    style={{ backgroundColor: '#d3544f' }}
+                    className="bg-accent hover:bg-accent/90"
                     onClick={() => window.open('https://rosmededucation.ru/', '_blank')}
                   >
                     Записаться со скидкой
                   </Button>
                 </CardContent>
               </Card>
-              <Card className="border-2 hover:shadow-xl transition-shadow" style={{ borderColor: '#1d4356' }}>
+              <Card className="border-2 border-primary/30 hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
-                    <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: '#1d4356', color: 'white' }}>
+                    <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 bg-primary text-white">
                       Стандартная цена
                     </div>
                     <div className="font-['Montserrat'] font-bold text-4xl mb-2" style={{ color: '#1d4356' }}>
@@ -390,7 +387,7 @@ const Index = () => {
                     className="w-full font-semibold"
                     size="lg"
                     variant="outline"
-                    style={{ borderColor: '#1d4356', color: '#1d4356' }}
+                    className="border-primary text-primary hover:bg-primary/10"
                     onClick={() => window.open('https://rosmededucation.ru/', '_blank')}
                   >
                     Записаться
@@ -404,7 +401,7 @@ const Index = () => {
 
       <section id="faq" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center" style={{ color: '#1d4356' }}>
+          <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-12 text-center text-foreground">
             Часто задаваемые вопросы
           </h2>
           <div className="max-w-3xl mx-auto">
@@ -439,10 +436,10 @@ const Index = () => {
                   key={index} 
                   value={`item-${index}`}
                   className="border-2 rounded-lg px-6"
-                  style={{ borderColor: '#1d4356' }}
+                  className="border-primary/30"
                 >
                   <AccordionTrigger className="hover:no-underline">
-                    <span className="font-['Montserrat'] font-semibold text-left" style={{ color: '#1d4356' }}>
+                    <span className="font-['Montserrat'] font-semibold text-left text-foreground">
                       {item.question}
                     </span>
                   </AccordionTrigger>
@@ -456,7 +453,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16" style={{ backgroundColor: '#1d4356' }}>
+      <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-['Montserrat'] font-bold text-3xl md:text-4xl mb-6 text-white">
             Готовы начать обучение?
@@ -466,8 +463,7 @@ const Index = () => {
           </p>
           <Button 
             size="lg"
-            style={{ backgroundColor: '#d3544f' }}
-            className="text-white hover:opacity-90 font-semibold text-lg px-8"
+            className="bg-accent text-white hover:bg-accent/90 font-semibold text-lg px-8"
             onClick={() => window.open('https://rosmededucation.ru/', '_blank')}
           >
             Записаться на курс
