@@ -17,12 +17,18 @@ const Index = () => {
       <header className="sticky top-0 z-50 border-b bg-white shadow-sm">
         <div className="container mx-auto px-4 py-5">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center">
-              <img 
-                src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
-                alt="МЕД-ОБРАЗ" 
-                className="h-48"
-              />
+            <div className="flex items-center gap-4">
+              <div>
+                <img 
+                  src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
+                  alt="МЕД-ОБРАЗ" 
+                  className="h-48"
+                />
+                <p className="text-sm text-gray-600 mt-2 max-w-xs leading-tight">
+                  Научно-образовательный центр Современных Медицинских Технологий<br/>
+                  проект Союза охраны психического здоровья
+                </p>
+              </div>
             </div>
             <div className="hidden md:flex gap-8 text-2xl">
               {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
@@ -50,7 +56,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 animate-fade-in">
-              <h1 className="font-['Montserrat'] font-bold text-5xl md:text-7xl mb-6 text-foreground">
+              <h1 className="font-['Montserrat'] font-bold text-4xl md:text-5xl mb-6 text-foreground">
                 Уровни психической организации личности в концепции психоаналитической диагностики
               </h1>
               <p className="text-3xl mb-8 text-gray-700 max-w-3xl mx-auto">
@@ -94,13 +100,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="о-курсе" className="py-16 bg-white">
+      <section id="о-курсе" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             О курсе
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
               <Card className="border-2 border-primary/20 hover:shadow-lg hover:border-primary/40 transition-all">
                 <CardContent className="p-6">
                   <Icon name="Calendar" size={32} className="mb-4 text-accent" />
@@ -144,13 +150,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="для-кого" className="py-16">
+      <section id="для-кого" className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Для кого этот курс
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-12">
               <Card className="bg-white hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
                   <Icon name="Users" size={40} className="mb-4 text-accent" />
@@ -174,7 +180,7 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
-            <Card className="mt-8 bg-white">
+            <Card className="mt-12 bg-white border-2 border-accent/30">
               <CardContent className="p-8">
                 <h3 className="font-['Montserrat'] font-semibold text-xl mb-6" style={{ color: '#1d4356' }}>
                   Данный курс подойдёт для тех, кто желает:
@@ -198,13 +204,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="программа" className="py-16 bg-white">
+      <section id="программа" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Программа курса
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
+            <div className="space-y-6">
               {[
                 {
                   title: 'Невротические, пограничные, психотические и нарциссический личности',
@@ -235,8 +241,7 @@ const Index = () => {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div 
-                        className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-['Montserrat'] font-bold text-white"
-                        className="bg-accent"
+                        className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-['Montserrat'] font-bold border-2 border-accent text-accent text-xl"
                       >
                         {index + 1}
                       </div>
@@ -251,17 +256,36 @@ const Index = () => {
                 </Card>
               ))}
             </div>
+            
+            <Card className="mt-12 bg-blue-50 border-2 border-primary/30">
+              <CardContent className="p-8">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="BookOpen" size={28} className="flex-shrink-0 mt-1 text-primary" />
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      <strong>В процессе обучения</strong> вы получите два промежуточных домашних задания на отработку практических навыков психоаналитической диагностики с обратной связью от преподавателя.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="ClipboardCheck" size={28} className="flex-shrink-0 mt-1 text-primary" />
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      <strong>По итогам курса</strong> обучающиеся проходят тестирование.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      <section id="чему-научишься" className="py-16">
+      <section id="чему-научишься" className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Чему вы научитесь
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
                   icon: 'Target',
