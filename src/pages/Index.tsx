@@ -14,23 +14,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen font-['Open_Sans']" style={{ backgroundColor: '#c7c6c6' }}>
-      <header className="sticky top-0 z-50 border-b bg-white" style={{ borderColor: '#e0e0e0' }}>
-        <div className="container mx-auto px-4 py-4">
+      <header className="sticky top-0 z-50 border-b" style={{ backgroundColor: '#2a5468', borderColor: '#2a5468' }}>
+        <div className="container mx-auto px-4 py-5">
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
                 src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
                 alt="МЕД-ОБРАЗ" 
-                className="h-12"
+                className="h-16"
               />
             </div>
-            <div className="hidden md:flex gap-6 text-sm">
+            <div className="hidden md:flex gap-8 text-base">
               {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  className="hover:opacity-70 transition-colors"
-                  style={{ color: '#1d4356' }}
+                  className="text-white hover:text-gray-200 transition-colors font-medium"
                 >
                   {item}
                 </button>
