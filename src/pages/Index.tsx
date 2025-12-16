@@ -532,7 +532,7 @@ const Index = () => {
                 rosmededucation.ru
               </a>
             </p>
-            <p className="text-gray-500 text-xs mt-2">© 2024</p>
+            <p className="text-gray-500 text-xs mt-2">© 2026</p>
           </div>
         </div>
       </footer>
