@@ -17,6 +17,13 @@ const Index = () => {
       <header className="sticky top-0 z-50 border-b" style={{ backgroundColor: '#1d4356', borderColor: '#1d4356' }}>
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
+            <div className="flex items-center">
+              <img 
+                src="https://cdn.poehali.dev/files/photo_5337165063867009967_x.jpg" 
+                alt="МЕД-ОБРАЗ" 
+                className="h-12"
+              />
+            </div>
             <div className="hidden md:flex gap-6 text-sm">
               {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
                 <button
