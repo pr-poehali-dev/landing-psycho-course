@@ -74,13 +74,19 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-full opacity-20" style={{ backgroundColor: '#1d4356' }}></div>
-                <img 
-                  src="https://cdn.poehali.dev/files/Менделевич итоговый, копия.jpg"
-                  alt="Образование"
-                  className="relative rounded-lg shadow-2xl w-full max-w-md"
-                />
+              <div className="relative w-full max-w-md">
+                <div className="absolute -inset-4 rounded-lg opacity-20" style={{ backgroundColor: '#1d4356' }}></div>
+                <div className="relative rounded-lg shadow-2xl overflow-hidden bg-white">
+                  <div className="aspect-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                      title="Видео о курсе"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -304,7 +310,7 @@ const Index = () => {
                   <div className="flex-shrink-0">
                     <div className="w-48 h-48 rounded-full overflow-hidden border-4" style={{ borderColor: '#d3544f' }}>
                       <img 
-                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                        src="https://cdn.poehali.dev/files/photo_5377459643875461653_y.jpg"
                         alt="Екатерина Степанова"
                         className="w-full h-full object-cover"
                       />
