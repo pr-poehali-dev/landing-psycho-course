@@ -17,18 +17,12 @@ const Index = () => {
       <header className="sticky top-0 z-50 border-b bg-white shadow-sm">
         <div className="container mx-auto px-4 py-5">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div>
-                <img 
-                  src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
-                  alt="МЕД-ОБРАЗ" 
-                  className="h-48"
-                />
-                <p className="text-sm text-gray-600 mt-2 max-w-xs leading-tight">
-                  Научно-образовательный центр Современных Медицинских Технологий<br/>
-                  проект Союза охраны психического здоровья
-                </p>
-              </div>
+            <div className="flex items-center">
+              <img 
+                src="https://cdn.poehali.dev/files/20251216_221940_0000.png" 
+                alt="МЕД-ОБРАЗ" 
+                className="h-48"
+              />
             </div>
             <div className="hidden md:flex gap-8 text-2xl">
               {['О курсе', 'Для кого', 'Программа', 'Преподаватель', 'Цена'].map((item) => (
@@ -59,8 +53,11 @@ const Index = () => {
               <h1 className="font-['Montserrat'] font-bold text-4xl md:text-5xl mb-6 text-foreground">
                 Уровни психической организации личности в концепции психоаналитической диагностики
               </h1>
-              <p className="text-3xl mb-8 text-gray-700 max-w-3xl mx-auto">
+              <p className="text-3xl mb-4 text-gray-700 max-w-3xl mx-auto">
                 Авторский курс для психологов-консультантов и психотерапевтов, начинающих практику в психоаналитическом подходе
+              </p>
+              <p className="text-2xl mb-8 text-accent font-semibold">
+                📅 Старт курса: 3 февраля 2026 г.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -105,50 +102,58 @@ const Index = () => {
           <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             О курсе
           </h2>
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="space-y-6 mb-16">
               <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
-                <CardContent className="p-8">
-                  <Icon name="Calendar" size={48} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
-                    Формат
-                  </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    7 вебинаров в прямом эфире с лекционным материалом и возможностью задать вопросы + 2 практических-супервизионных занятия с разбором случаев
-                  </p>
+                <CardContent className="p-6 flex items-center gap-6">
+                  <Icon name="Calendar" size={56} className="flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-['Montserrat'] font-semibold text-2xl mb-2 text-foreground">
+                      Формат
+                    </h3>
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      7 вебинаров в прямом эфире с лекционным материалом и возможностью задать вопросы + 2 практических-супервизионных занятия с разбором случаев
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
               <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
-                <CardContent className="p-8">
-                  <Icon name="Video" size={48} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
-                    Записи
-                  </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    Все материалы остаются в записи и доступны в течение 6 месяцев после окончания курса
-                  </p>
+                <CardContent className="p-6 flex items-center gap-6">
+                  <Icon name="Video" size={56} className="flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-['Montserrat'] font-semibold text-2xl mb-2 text-foreground">
+                      Записи
+                    </h3>
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      Все материалы остаются в записи и доступны в течение 6 месяцев после окончания курса
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
               <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
-                <CardContent className="p-8">
-                  <Icon name="Award" size={48} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
-                    Документ
-                  </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    Удостоверение о повышении квалификации установленного образца с занесением в ФРДО
-                  </p>
+                <CardContent className="p-6 flex items-center gap-6">
+                  <Icon name="Award" size={56} className="flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-['Montserrat'] font-semibold text-2xl mb-2 text-foreground">
+                      Документ
+                    </h3>
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      Удостоверение о повышении квалификации установленного образца с занесением в ФРДО
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
               <Card className="border-2 border-primary/30 hover:shadow-lg hover:border-primary/50 transition-all">
-                <CardContent className="p-8">
-                  <Icon name="BookOpen" size={48} className="mb-4 text-accent" />
-                  <h3 className="font-['Montserrat'] font-semibold text-2xl mb-3 text-foreground">
-                    Материалы
-                  </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    После каждого вебинара: презентации и конспекты. Общий чат для обсуждения с преподавателем
-                  </p>
+                <CardContent className="p-6 flex items-center gap-6">
+                  <Icon name="BookOpen" size={56} className="flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-['Montserrat'] font-semibold text-2xl mb-2 text-foreground">
+                      Материалы
+                    </h3>
+                    <p className="text-gray-700 text-xl leading-relaxed">
+                      После каждого вебинара: презентации и конспекты. Общий чат для обсуждения с преподавателем
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -205,26 +210,26 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
-            <Card className="mt-12 bg-white border-2 border-accent/30">
-              <CardContent className="p-8">
-                <h3 className="font-['Montserrat'] font-semibold text-xl mb-6" style={{ color: '#1d4356' }}>
-                  Данный курс подойдёт для тех, кто желает:
-                </h3>
-                <ul className="space-y-4">
-                  {[
-                    'Структурировать имеющиеся и получить новые знания об уровнях развития личностной организации',
-                    'Разобраться в диагностических критериях психоаналитического подхода',
-                    'Уметь определять уровень психического функционирования клиента (невротический, пограничный, психотический, нарциссический) и в соответствии с этим понимать дальнейшую стратегию работы уже на первых сессиях',
-                    'Укрепить навыки психоаналитической диагностики на практических примерах и супервизиях в ходе обучения'
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <Icon name="CheckCircle2" size={24} className="flex-shrink-0 mt-1 text-accent" />
-                      <span className="text-gray-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="mt-12">
+              <h3 className="font-['Montserrat'] font-semibold text-4xl mb-8 text-center text-foreground">
+                Курс для тех, кто хочет:
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  'Структурировать имеющиеся и получить новые знания об уровнях развития личностной организации',
+                  'Разобраться в диагностических критериях психоаналитического подхода',
+                  'Уметь определять уровень психического функционирования клиента (невротический, пограничный, психотический, нарциссический) и в соответствии с этим понимать дальнейшую стратегию работы уже на первых сессиях',
+                  'Укрепить навыки психоаналитической диагностики на практических примерах и супервизиях в ходе обучения'
+                ].map((item, index) => (
+                  <Card key={index} className="border-2 border-accent/30 hover:shadow-lg hover:border-accent/50 transition-all">
+                    <CardContent className="p-6 flex items-start gap-4">
+                      <Icon name="CheckCircle2" size={32} className="flex-shrink-0 mt-1 text-accent" />
+                      <p className="text-gray-700 text-xl leading-relaxed">{item}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -316,13 +321,13 @@ const Index = () => {
                   description: 'Бережно относиться к себе и понимать свои ресурсные возможности в зависимости от работы с теми или иными клиентами'
                 }
               ].map((item, index) => (
-                <Card key={index} className="bg-white hover:shadow-xl transition-all hover:scale-105">
-                  <CardContent className="p-6">
-                    <Icon name={item.icon as any} size={40} className="mb-4 text-accent" />
-                    <h3 className="font-['Montserrat'] font-semibold text-lg mb-3" style={{ color: '#1d4356' }}>
+                <Card key={index} className="bg-white hover:shadow-xl transition-all hover:scale-105 border-2 border-primary/20">
+                  <CardContent className="p-8">
+                    <Icon name={item.icon as any} size={56} className="mb-4 text-accent" />
+                    <h3 className="font-['Montserrat'] font-semibold text-2xl mb-4 text-foreground">
                       {item.title}
                     </h3>
-                    <p className="text-gray-700 text-sm">{item.description}</p>
+                    <p className="text-gray-700 text-xl leading-relaxed">{item.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -331,17 +336,17 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="преподаватель" className="py-16 bg-white">
+      <section id="преподаватель" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-['Montserrat'] font-bold text-5xl md:text-6xl mb-12 text-center text-foreground">
             Преподаватель
           </h2>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <Card className="border-2 border-primary/30">
-              <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row gap-8 items-center">
+              <CardContent className="p-10">
+                <div className="flex flex-col md:flex-row gap-10 items-center">
                   <div className="flex-shrink-0">
-                    <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-accent">
+                    <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-accent">
                       <img 
                         src="https://cdn.poehali.dev/files/photo_5377459643875461653_y.jpg"
                         alt="Екатерина Степанова"
@@ -350,22 +355,22 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-['Montserrat'] font-bold text-2xl mb-2 text-accent">
+                    <h3 className="font-['Montserrat'] font-bold text-3xl mb-3 text-accent">
                       Екатерина Степанова
                     </h3>
-                    <p className="text-gray-700 mb-6 text-lg">
+                    <p className="text-gray-700 mb-8 text-2xl">
                       Практикующий психолог с более чем 8-летним опытом
                     </p>
-                    <ul className="space-y-3">
+                    <ul className="space-y-5">
                       {[
                         'Супервизор Российской Психотерапевтической Ассоциации (РПА)',
                         'Преподаватель Научно-Образовательного Центра Современных Медицинских Технологий',
                         'Специализация: индивидуальное и семейное консультирование и терапия взрослых и подростков',
                         'Интегративный подход с опорой на психоаналитический'
                       ].map((item, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <Icon name="Award" size={20} className="flex-shrink-0 mt-1 text-accent" />
-                          <span className="text-gray-700 text-sm">{item}</span>
+                        <li key={index} className="flex items-start gap-4">
+                          <Icon name="Award" size={28} className="flex-shrink-0 mt-1 text-accent" />
+                          <span className="text-gray-700 text-xl leading-relaxed">{item}</span>
                         </li>
                       ))}
                     </ul>
